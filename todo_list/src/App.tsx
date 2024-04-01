@@ -9,6 +9,9 @@ import TaskList from './components/TaskList';
 //Css
 import styles from "./App.module.css"
 
+//interfaces
+import { ITask } from './interfaces/Task';
+
 function App() {
   return (
     <div>
