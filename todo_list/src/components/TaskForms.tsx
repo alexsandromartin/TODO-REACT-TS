@@ -14,6 +14,7 @@ interface Props{
     btntxt: string
     taskList: ITask[]
     setTaskList?: React.Dispatch<React.SetStateAction<ITask[]>>
+    task?: ITask | null
 }
 
 const TaskForms = ({btntxt, taskList, setTaskList}: Props) => {

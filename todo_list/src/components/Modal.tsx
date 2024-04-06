@@ -4,15 +4,22 @@ import React from "react"
 import styles from './Modal.module.css'
 
 interface Props {
-
+    children: React.ReactNode
 }
 
-const Modal = (props: Props) =>{
+const Modal = ({children}: Props) =>{   
+    
+    const CloseModal = (e:React.MouseEvent):void => {
+        const modal = document.querySelector("#modal")
+        modal!.classList.add("hide")
+    }
+    
     return (
-        <div id="modal">
-            <div></div>
-            <div>
+        <div id="modal" className="hide">
+            <div className={styles.fade} onClick={CloseModal}></div>
+            <div className={styles.modal}>
                 <h2>Texto Modal</h2>
+                {children}
             </div>
         </div>
     )
